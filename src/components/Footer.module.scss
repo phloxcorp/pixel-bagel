@@ -1,0 +1,48 @@
+@import '../../public/styles/variables.scss';
+
+.container {
+  height: 280px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  > p {
+    color: $white;
+    margin: 1.4rem 0 1rem;
+  }
+}
+
+.info {
+  color: $white;
+  display: flex;
+  gap: 1.2rem;
+
+  > a {
+    cursor: pointer;
+    color: white;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    height: 230px;
+
+    > img {
+      width: 180px;
+    }
+
+    > p {
+      font-size: 13px;
+    }
+  }
+  
+  .info {
+    gap: 0.6rem;
+
+    > a {
+      font-size: 13px;
+    }
+  }
+}

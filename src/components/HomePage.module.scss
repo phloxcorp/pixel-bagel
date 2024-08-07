@@ -1,0 +1,107 @@
+@import '../../public/styles/variables.scss';
+
+.container {
+  padding: 0 1.4rem;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background {
+  padding-top: 3rem;
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  box-sizing: border-box;
+  background-image: url('/public/images/stars.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .planet {
+    position: absolute;
+    top: -140px;
+    left: -120px;
+  }
+
+  .title {
+    color: $white;
+    font-size: 60px;
+    font-weight: 900;
+    margin: 0;
+    text-align: center;
+  }
+
+  .subTitle {
+    color: $white;
+    font-size: 22px;
+    margin: 1rem 0 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 780px) {
+  .main {
+    .planet {
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .main {
+    .planet {
+      width: 200px;
+      left: -60px;
+      top: -150px;
+    }
+
+    .title {
+      font-size: 47px;
+    }
+  
+    .subTitle {
+      font-size: 17px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    min-height: 65vh;
+  }
+
+  .main {
+    .planet {
+      width: 170px;
+      top: -140px;
+      left: -30px;
+    }
+
+    .title {
+      font-size: 35px;
+    }
+  
+    .subTitle {
+      font-size: 17px;
+    }
+  }
+}
