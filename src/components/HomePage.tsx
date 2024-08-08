@@ -1,6 +1,6 @@
 import { LegacyRef } from 'react'
 import styles from './HomePage.module.scss'
-import planet from '/images/planet.png'
+import planet from '@images/planet.png'
 import Background from './Background'
 import FadeUp from './FadeUp'
 

@@ -1,5 +1,5 @@
 import styles from './Footer.module.scss'
-import logo from '/images/pixel_bagel_gray.png'
+import logo from '@images/pixel_bagel_gray.png'
 
 export default function Footer() {
   return (

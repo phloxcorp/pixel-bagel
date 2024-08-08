@@ -1,40 +1,26 @@
-import { useEffect, useRef, useState } from 'react';
-import styles from './FadeUp.module.scss'
-import cn from 'classnames'
+import { motion } from 'framer-motion'
 
 export default function FadeUp({ children }: { children: React.ReactNode }) {
-  const [fadeIn, setFadeIn] = useState(false)
-  const targetElement = useRef(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-           setFadeIn(true)
-          } else {
-            setFadeIn(false)
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    if (targetElement.current) {
-      observer.observe(targetElement.current);
-    }
-
-    return () => {
-      if (targetElement.current) {
-        observer.unobserve(targetElement.current);
-      }
-    };
-
-  }, [])
-
   return (
-    <div ref={targetElement} className={cn(styles.fadeWrap, { [styles.fadeIn]: fadeIn })}>
+    <motion.div
+      initial={{
+        y: '4rem',
+        opacity: 0,
+      }}
+      whileInView={{
+        y: '0rem',
+        opacity: 1,
+      }}
+      transition={{
+        ease: "easeIn",
+        duration: 0.6,
+      }}
+      style={{
+        width: '100%',
+        willChange: 'transform',
+      }}
+    >
       {children}
-    </div>
+    </motion.div>
   )
 }

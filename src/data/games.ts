@@ -1,5 +1,5 @@
-import BLOCK_UNIVERSE from '/images/block_universe.png'
-import WATERMELON_BIRD from '/images/watermelon_bird.png'
+import BLOCK_UNIVERSE from '@images/block_universe.png'
+import WATERMELON_BIRD from '@images/watermelon_bird.png'
 
 export const games = [
   {

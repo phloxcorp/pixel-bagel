@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styles from './Navbar.module.scss'
-import logo from '/images/pixel_bagel_logo.png'
+import logo from '@images/pixel_bagel_logo.png'
 import cn from 'classnames'
 
 export default function Navbar({ onMoveToAbout, onMoveToGames }: {
@@ -26,6 +26,7 @@ export default function Navbar({ onMoveToAbout, onMoveToGames }: {
           {['ABOUT', 'GAMES'].map((menu) => {
             return (
               <button 
+                key={menu}
                 onClick={() => clickMenu(menu)} 
                 className={cn({ [styles.click]: current === menu })}
               >
