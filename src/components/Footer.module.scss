@@ -1,0 +1,53 @@
+@import '@/styles/variables.scss';
+
+.container {
+  height: 280px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  > p {
+    color: white;
+    margin: 23px 0 21px;
+    font-size: 16px;
+  }
+}
+
+.info {
+  color: white;
+  display: flex;
+  gap: 16px;
+
+  > a {
+    color: white;
+    font-size: 16px;
+  }
+
+  > a:hover {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    height: 230px;
+
+    > img {
+      width: 180px;
+    }
+
+    > p {
+      font-size: 12px;
+    }
+  }
+  
+  .info {
+    gap: 9.6px;
+
+    > a {
+      font-size: 12x;
+    }
+  }
+}

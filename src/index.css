@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 900;
+  src: url('/fonts/Montserrat-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  src: url('/fonts/Montserrat-Medium.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+  cursor: url('@images/pixel_bagel_cursor.png') 20 20, auto;
+  background-color: black;
+}
+
+a {
+  text-decoration: none; 
+  outline: none
+}
+
+a:hover, a:active {
+  text-decoration: none;
+  cursor: url('@images/pixel_bagel_cursor.png') 20 20, auto;
+}
+
+button:hover {
+  cursor: url('@images/pixel_bagel_cursor.png') 20 20, auto;
+}
