@@ -6,7 +6,7 @@ export default function Background() {
     <div className={styles.container}>
       {Array(25).fill(0).map((_, i) => <Star key={i} />)}
       <Meteor duration={3.5} />
-      <Meteor left={810} width={80} posx={10} posy={28} duration={4.5}/>
+      <Meteor left={810} width={80} posx={10} posy={28} duration={4.5} />
     </div>
   )
 }
@@ -15,7 +15,7 @@ function Star() {
   const screenWidth = screen.width;
   const screenHeight = screen.height;
 
-  function getRandomValue(max: number): number {
+  function getRandomValue(max: number) {
     return Math.floor(Math.random() * max);
   }
 
@@ -49,7 +49,7 @@ function Star() {
         top: `${y}px`, 
         left: `${x}px`, 
         animationDelay: `${(Math.random() * 2).toFixed(1)}s` 
-    }}
+      }}
     />
   )
 }
@@ -88,7 +88,7 @@ const MeteorStyles = styled.div<{
   $duration?: number
 }>`
   left: ${({ $left }) => $left}px;
-  animation: meteor  ${({ $duration }) => $duration}s infinite;
+  animation: meteor ${({ $duration }) => $duration}s infinite;
 
   &:after {
     width: ${({ $width }) => $width}px;

@@ -1,8 +1,8 @@
-import Footer from "./components/Footer"
-import Games from "./components/Games"
-import HomePage from "./components/HomePage"
-import Navbar from "./components/Navbar"
-import useMoveScroll from "./hook/useMoveScroll"
+import Footer from './components/Footer'
+import Games from './components/Games'
+import HomePage from './components/HomePage'
+import Navbar from './components/Navbar'
+import useMoveScroll from './hook/useMoveScroll'
 
 function App() {
   const {element: about, onMoveToElement: onMoveToAbout} = useMoveScroll()

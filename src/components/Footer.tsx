@@ -4,7 +4,7 @@ import logo from '@images/pixel_bagel_gray.png'
 export default function Footer() {
   return (
     <div className={styles.container}>
-      <img src={logo} alt="logo"  width={200} />
+      <img src={logo} alt="logo" width={200} />
       <p>Copyright © Pixel Bagel Studio 2024</p>
       <div className={styles.info}>
         <a href='https://phlox.notion.site/Terms-of-Service-874785b54b8b424baf9bbeb29fee9b1a?pvs=4' target='_blank'>

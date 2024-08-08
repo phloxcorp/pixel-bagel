@@ -11,7 +11,7 @@ export default function HomePage({ element }: { element: LegacyRef<HTMLDivElemen
       <div className={styles.background}>
         <FadeUp>
           <div className={styles.main}>
-            <img className={styles.planet} src={planet} alt="planet" width={220} />
+            <img className={styles.planet} src={planet} alt="planet" width={215} />
             <p className={styles.title}>GAMES MADE<br />FOR EVERYONE</p>
             <p className={styles.subTitle}>Crafting Experiences That Bring People Together</p>
           </div>

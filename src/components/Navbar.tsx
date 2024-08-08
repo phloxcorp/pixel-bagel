@@ -21,7 +21,7 @@ export default function Navbar({ onMoveToAbout, onMoveToGames }: {
   return (
     <div className={styles.navContainer}>
       <div className={styles.navbar}>
-        <img src={logo} alt="logo" width={180}/>
+        <img src={logo} alt="logo" width={165} />
         <div className={styles.menu}>
           {['ABOUT', 'GAMES'].map((menu) => {
             return (

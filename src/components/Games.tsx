@@ -18,7 +18,7 @@ export default function Games({ element }: { element: LegacyRef<HTMLDivElement> 
           {games.map((game) => {
             return (
               <div key={game.name} className={styles.gameContainer}>
-                <img className={styles.image} src={game.image} alt="game_img"/>
+                <img className={styles.image} src={game.image} alt="game_img" />
                 <span className={styles.name} >{game.name}</span>
                 <div className={styles.logoContainer}>
                   <a className={styles.logo} href={game.appleStore} target='_blank'>

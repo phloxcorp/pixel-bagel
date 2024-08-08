@@ -1,22 +1,22 @@
 @import '@/styles/variables.scss';
 
 .container {
-  padding: 0 1.4rem;
+  padding: 0 16px;
   background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 85vh;
+  min-height: 80vh;
   overflow: hidden;
   z-index: -1;
 }
 
 .background {
-  padding-top: 3rem;
+  padding-top: 48px;
   width: 100%;
-  max-width: 800px;
-  height: 500px;
+  max-width: 752px;
+  height: 435px;
   box-sizing: border-box;
   background-image: url('@images/stars.png');
   background-size: contain;
@@ -38,12 +38,12 @@
 
   .planet {
     position: absolute;
-    top: -140px;
-    left: -120px;
+    top: -155px;
+    left: 0px;
   }
 
   .title {
-    color: $white;
+    color: white;
     font-size: 60px;
     font-weight: 900;
     margin: 0;
@@ -51,18 +51,10 @@
   }
 
   .subTitle {
-    color: $white;
+    color: white;
     font-size: 22px;
-    margin: 1rem 0 0;
+    margin: 16px 0 0;
     text-align: center;
-  }
-}
-
-@media (max-width: 780px) {
-  .main {
-    .planet {
-      margin-left: 1rem;
-    }
   }
 }
 
@@ -74,8 +66,7 @@
   .main {
     .planet {
       width: 200px;
-      left: -60px;
-      top: -150px;
+      top: -160px;
     }
 
     .title {
@@ -97,15 +88,14 @@
     .planet {
       width: 170px;
       top: -140px;
-      left: -30px;
     }
 
     .title {
-      font-size: 35px;
+      font-size: 33px;
     }
   
     .subTitle {
-      font-size: 17px;
+      font-size: 16px;
     }
   }
 }
