@@ -55,6 +55,22 @@
       justify-content: center;
       align-items: center;
     }
+
+    .logo:first-child {
+      img {
+        padding-bottom: 3.7px;
+      }
+    }
+
+    .logo:last-child {
+      img {
+        padding-left: 2px;
+      }
+    }
+
+    .logo:hover {
+      box-shadow: 0 2px 6px 2px rgb(255, 255, 255, 0.2);
+    }
   }
 }
 
