@@ -1,5 +1,6 @@
 import styles from './Background.module.scss'
 import styled from 'styled-components'
+import cn from 'classnames'
 
 export default function Background() {
   return (
@@ -7,6 +8,8 @@ export default function Background() {
       {Array(25).fill(0).map((_, i) => <Star key={i} />)}
       <Meteor duration={3.5} />
       <Meteor left={810} width={80} posx={10} posy={28} duration={4.5} />
+      <Meteor left={200} width={70} posx={9} posy={24} duration={5.5} />
+      <Meteor left={570} width={80} posx={10} posy={28} duration={5} />
     </div>
   )
 }
@@ -70,7 +73,7 @@ function Meteor({
 
   return (
     <MeteorStyles 
-      className={styles.meteor} 
+      className={cn(styles.meteor)} 
       $left={left} 
       $width={width} 
       $posx={posx} 
@@ -87,13 +90,13 @@ const MeteorStyles = styled.div<{
   $posy?: number
   $duration?: number
 }>`
-  left: ${({ $left }) => $left}px;
-  animation: meteor ${({ $duration }) => $duration}s infinite;
+  left: ${(props) => props.$left}px;
+  animation: meteor ${(props) => props.$duration}s infinite;
 
   &:after {
-    width: ${({ $width }) => $width}px;
-    left: -${({ $posx }) => $posx}px;
-    top: -${({ $posy }) => $posy}px;
+    width: ${(props) => props.$width}px;
+    left: -${(props) => props.$posx}px;
+    top: -${(props) => props.$posy}px;
   }
 
   @keyframes meteor {
