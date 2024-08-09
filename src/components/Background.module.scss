@@ -70,7 +70,6 @@
 
 .meteor {
   position: relative;
-  left: -260px;
   width: 3px;
   height: 3px;
   border-radius: 50%;
@@ -80,14 +79,70 @@
 
 .meteor::after {
   position: absolute;
-  left: -15px;
-  top: -38px;
-  width: 110px;
   height: 2px;
   background: linear-gradient(to left, #fff0, #eee);
   border-radius: 0 0 50%;
   content: "";
   transform: rotateZ(-45deg);
+}
+
+.position {
+  &1 {
+    left: -260px;
+    animation: meteor 3.5s infinite;
+  }
+
+  &2 {
+    left: 810px;
+    animation: meteor 4.5s infinite;
+  }
+
+  &3 {
+    left: 200px;
+    animation: meteor 5.5s infinite;
+  }
+
+  &4 {
+    left: 570px;
+    animation: meteor 5s infinite;
+  }
+}
+
+.position {
+  &1::after {
+    left: -15px;
+    top: -38px;
+    width: 110px;
+  }
+
+  &2::after {
+    left: -10px;
+    top: -28px;
+    width: 80px;
+  }
+
+  &3::after {
+    left: -9px;
+    top: -24px;
+    width: 70px;
+  }
+
+  &4::after {
+    left: -10px;
+    top: -28px;
+    width: 80px;
+  }
+}
+
+@keyframes meteor {
+  0% {
+    top: -10vh;
+    transform: translateX(0px);
+  }
+  100% {
+    top: 110vh;
+    transform: translateX(-120vh);
+  }
 }
 
 .mobileMeteor {
@@ -97,5 +152,15 @@
 @media (max-width: 480px) {
   .mobileMeteor {
     display: block;
+  }
+
+  .position {
+    &2 {
+      will-change: transform;
+    }
+  
+    &3 {
+      will-change: transform;
+    }
   }
 }

@@ -1,15 +1,11 @@
 import styles from './Background.module.scss'
-import styled from 'styled-components'
 import cn from 'classnames'
 
 export default function Background() {
   return (
     <div className={styles.container}>
       {Array(25).fill(0).map((_, i) => <Star key={i} />)}
-      <Meteor duration={3.5} />
-      <Meteor left={810} width={80} posx={10} posy={28} duration={4.5} />
-      <Meteor left={200} width={70} posx={9} posy={24} duration={5.5} isMobile />
-      <Meteor left={570} width={80} posx={10} posy={28} duration={5} isMobile />
+      {Array(4).fill(0).map((_, i) => <Meteor key={i} order={i}/>)}
     </div>
   )
 }
@@ -57,58 +53,17 @@ function Star() {
   )
 }
 
-function Meteor({ 
-  left,
-  width,
-  posx,
-  posy,
-  duration,
-  isMobile
-}: { 
-  left?: number 
-  width?: number
-  posx?: number
-  posy?: number
-  duration?: number
-  isMobile?: boolean
-}) {
+function Meteor({ order }: { order: number }) {
+  const position = [
+    `${styles.position1}`,
+    `${styles.position2}`,
+    `${styles.position3}`,
+    `${styles.position4}`,
+  ]
 
   return (
-    <MeteorStyles 
-      className={cn(styles.meteor, { [styles.mobileMeteor]: isMobile })} 
-      $left={left} 
-      $width={width} 
-      $posx={posx} 
-      $posy={posy} 
-      $duration={duration} 
-    />
+    <div className={cn(styles.meteor, position[order], {
+      [styles.mobileMeteor]: order === 1 || order === 2
+    })}/>
   )
 }
-
-const MeteorStyles = styled.div<{ 
-  $left?: number
-  $width?: number
-  $posx?: number
-  $posy?: number
-  $duration?: number
-}>`
-  left: ${(props) => props.$left}px;
-  animation: meteor ${(props) => props.$duration}s infinite;
-
-  &:after {
-    width: ${(props) => props.$width}px;
-    left: -${(props) => props.$posx}px;
-    top: -${(props) => props.$posy}px;
-  }
-
-  @keyframes meteor {
-    0% {
-      top: -10vh;
-      transform: translateX(0px);
-    }
-    100% {
-      top: 110vh;
-      transform: translateX(-120vh);
-    }
-  }
-`
