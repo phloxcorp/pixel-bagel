@@ -89,3 +89,13 @@
   content: "";
   transform: rotateZ(-45deg);
 }
+
+.mobileMeteor {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .mobileMeteor {
+    display: block;
+  }
+}

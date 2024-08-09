@@ -1,7 +1,7 @@
 @import '@/styles/variables.scss';
 
 .container {
-  padding: 0 16px;
+  padding: 40px 16px;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@
 
   .title {
     color: white;
-    font-size: 60px;
+    font-size: 52px;
     font-weight: 900;
     margin: 0;
     text-align: center;
@@ -52,7 +52,7 @@
 
   .subTitle {
     color: white;
-    font-size: 22px;
+    font-size: 18px;
     margin: 16px 0 0;
     text-align: center;
   }
