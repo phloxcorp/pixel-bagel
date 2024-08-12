@@ -6,7 +6,7 @@ export const games = [
     name: 'BLOCK UNIVERSE',
     image: BLOCK_UNIVERSE,
     appleStore: '',
-    googlePlay: '',
+    googlePlay: 'https://play.google.com/store/apps/details?id=io.phloxcorp.tenbyten',
   }, 
   {
     name: 'WATERMELON BIRD',
