@@ -1,53 +1,105 @@
 import styles from './Background.module.scss'
 import cn from 'classnames'
 
+type Star = {
+  size: string
+  twinkle: string
+  x: number
+  y: number
+}
+
+const stars = [
+  {
+    size: styles.size1,
+    twinkle: styles.twinkle1,
+    x: 20,
+    y: 20,
+  },
+  {
+    size: styles.size2,
+    twinkle: styles.twinkle2,
+    x: 25,
+    y: 40,
+  },
+  {
+    size: styles.size3,
+    twinkle: styles.twinkle1,
+    x: 85,
+    y: 90,
+  },
+  {
+    size: styles.size1,
+    twinkle: styles.twinkle1,
+    x: 30,
+    y: 70,
+  },
+  {
+    size: styles.size2,
+    twinkle: styles.twinkle2,
+    x: 45,
+    y: 35,
+  },
+  {
+    size: styles.size3,
+    twinkle: styles.twinkle1,
+    x: 40,
+    y: 85,
+  },
+  {
+    size: styles.size2,
+    twinkle: styles.twinkle3,
+    x: 75,
+    y: 30,
+  },
+  {
+    size: styles.size3,
+    twinkle: styles.twinkle2,
+    x: 10,
+    y: 70,
+  },
+  {
+    size: styles.size1,
+    twinkle: styles.twinkle1,
+    x: 70,
+    y: 20,
+  },
+  {
+    size: styles.size2,
+    twinkle: styles.twinkle1,
+    x: 40,
+    y: 60,
+  },
+  {
+    size: styles.size3,
+    twinkle: styles.twinkle2,
+    x: 60,
+    y: 40,
+  },
+  {
+    size: styles.size1,
+    twinkle: styles.twinkle3,
+    x: 55,
+    y: 50,
+  },
+]
+
+
 export default function Background() {
   return (
-    <div className={styles.container}>
-      {Array(25).fill(0).map((_, i) => <Star key={i} />)}
-      {Array(4).fill(0).map((_, i) => <Meteor key={i} order={i}/>)}
-    </div>
+    <>
+      {stars.map((star, i) => <Star key={i} star={star} />)}
+      {Array(2).fill(0).map((_, i) => <Meteor key={i} order={i}/>)}
+    </>
   )
 }
 
-function Star() {
-  const screenWidth = screen.width;
-  const screenHeight = screen.height;
-
-  function getRandomValue(max: number) {
-    return Math.floor(Math.random() * max);
-  }
-
-  const _s = getRandomValue(3);
-  const _o = getRandomValue(5);
-  const _t = getRandomValue(6);
-  const x = getRandomValue(screenWidth);
-  const y = getRandomValue(screenHeight);
-
-  const size = [`${styles.size1}`, `${styles.size2}`, `${styles.size3}`];
-  const opacity = [
-    `${styles.opacity1}`, 
-    `${styles.opacity1}`, 
-    `${styles.opacity1}`, 
-    `${styles.opacity2}`, 
-    `${styles.opacity3}`
-  ];
-  const twinkle = [
-    `${styles.twinkle1}`,
-    `${styles.twinkle1}`,
-    `${styles.twinkle1}`,
-    `${styles.twinkle2}`,
-    `${styles.twinkle2}`,
-    `${styles.twinkle3}`,
-  ];
-
+function Star({ star }: { star: Star }) {
   return (
-    <div 
-      className={`${styles.star} ${size[_s]} ${opacity[_o]} ${twinkle[_t]}`}
-      style={{ 
-        top: `${y}px`, 
-        left: `${x}px`, 
-        animationDelay: `${(Math.random() * 2).toFixed(1)}s` 
+    <div
+      className={cn(styles.star, star.size, star.twinkle)}
+      style={{
+        top: `${star.y}%`,
+        left: `${star.x}%`,
       }}
     />
   )
@@ -56,14 +108,10 @@ function Star() {
 function Meteor({ order }: { order: number }) {
   const position = [
     `${styles.position1}`,
-    `${styles.position2}`,
-    `${styles.position3}`,
-    `${styles.position4}`,
+    `${styles.position2}`
   ]
 
   return (
-    <div className={cn(styles.meteor, position[order], {
-      [styles.mobileMeteor]: order === 1 || order === 2
-    })}/>
+    <div className={`${styles.meteor} ${position[order]}`}/>
   )
 }
