@@ -1,11 +1,10 @@
 import styles from './Background.module.scss'
-import cn from 'classnames'
 
 export default function Background() {
   return (
     <div className={styles.container}>
       {Array(25).fill(0).map((_, i) => <Star key={i} />)}
-      {Array(4).fill(0).map((_, i) => <Meteor key={i} order={i}/>)}
+      {Array(2).fill(0).map((_, i) => <Meteor key={i} order={i}/>)}
     </div>
   )
 }
@@ -56,14 +55,10 @@ function Star() {
 function Meteor({ order }: { order: number }) {
   const position = [
     `${styles.position1}`,
-    `${styles.position2}`,
-    `${styles.position3}`,
-    `${styles.position4}`,
+    `${styles.position2}`
   ]
 
   return (
-    <div className={cn(styles.meteor, position[order], {
-      [styles.mobileMeteor]: order === 1 || order === 2
-    })}/>
+    <div className={`${styles.meteor} ${position[order]}`}/>
   )
 }

@@ -1,10 +1,8 @@
 @import '@/styles/variables.scss';
 
 .container {
-  position: relative;
   background-color: $dark-grey;
   padding: 88px 0 128px;
-  z-index: 0;
 
   > p {
     color: white;
