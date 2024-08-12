@@ -69,31 +69,28 @@
 
 .meteor {
   position: absolute;
-  top: -10px;
-  width: 2px;
-  height: 80px;
-  background: linear-gradient(45deg, white, rgba(255, 255, 255, 0));
-  transform: rotate(45deg);
-  animation: meteor 3s ease-in-out infinite;
+  top: 0px;
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+  animation: meteor 4s ease-in-out infinite;
 }
 
 .position {
   &1 {
-    left: 105%;
-    animation-duration: 5.5s;
-    animation-delay: 3.5s;
+    left: 50%;
+    animation-duration: 4.5s;
   }
 
   &2 {
-    left: 50%;
-    animation-duration: 5s;
-    animation-delay: 2s;
+    left: 110%;
+    animation-duration: 3.5s;
   }
 }
 
 @keyframes meteor {
   0% {
-    transform: translateX(0) translateY(0) rotate(45deg);
+    transform: rotate(-45deg) translateX(0);
     opacity: 0;
   }
 
@@ -102,7 +99,7 @@
   }
   
   100% {
-    transform: translateX(-1200px) translateY(1200px) rotate(45deg);
+    transform: rotate(-45deg) translateX(-110vh);
     opacity: 0;
   }
 }
@@ -116,11 +113,5 @@
     &2 {
       left: 70%;
     }
-  }
-}
-
-@media (max-width: 480px) {
-  .meteor {
-    will-change: transform, opacity;
   }
 }
