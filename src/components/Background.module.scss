@@ -3,9 +3,8 @@
   background-color: white;
   position: absolute;
   overflow: hidden;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  filter: blur(0.5px);
+  animation: twinkling infinite alternate;
+  filter: blur(1px);
 }
 
 .size {
@@ -23,30 +22,18 @@
   }
 }
 
-.opacity {
-  &1 {
-    opacity: 0.8;
-  }
-  &2 {
-    opacity: 0.5;
-  }
-  &3 {
-    opacity: 0.1;
-  }
-}
-
 .twinkle {
   &1 {
-    animation-duration: 1s;
-    animation-name: twinkling;
+    animation-duration: 2s;
+    animation-delay: 100ms;
   }
   &2 {
-    animation-duration: 0.8s;
-    animation-name: twinkling;
+    animation-duration: 1.6s;
+    animation-delay: 200ms;
   }
   &3 {
-    animation-duration: 0.6s;
-    animation-name: twinkling;
+    animation-duration: 1.2s;
+    animation-delay: 300ms;
   }
 }
 
@@ -56,14 +43,9 @@
     box-shadow: 0 0 7px 0px rgb(255, 255, 255, 0.1);
   }
 
-  50% {
-    opacity: 0.5;
-    box-shadow: 0 0 7px 2px rgb(255, 255, 255, 0.5);
-  }
-
   100% {
     opacity: 0.7;
-    box-shadow: 0 0 7px 0px rgb(255, 255, 255, 0.1);
+    box-shadow: 0 0 7px 2px rgb(255, 255, 255, 0.5);
   }
 }
 
