@@ -1,5 +1,5 @@
 import styles from './Games.module.scss'
-import appleStore from '@images/logo_apple_store.png'
+// import appleStore from '@images/logo_apple_store.png'
 import googlePlay from '@images/logo_google_play.png'
 import { games } from '../data/games'
 import { LegacyRef } from 'react'
@@ -21,9 +21,9 @@ export default function Games({ element }: { element: LegacyRef<HTMLDivElement> 
                 <img className={styles.image} src={game.image} alt="game_img" />
                 <span className={styles.name} >{game.name}</span>
                 <div className={styles.logoContainer}>
-                  <a className={styles.logo} href={game.appleStore} target='_blank'>
+                  {/* <a className={styles.logo} href={game.appleStore} target='_blank'>
                     <img src={appleStore} alt="apple_store" width={20} />
-                  </a>
+                  </a> */}
                   <a className={styles.logo} href={game.googlePlay} target='_blank'>
                     <img src={googlePlay} alt="google_play" width={20} />
                   </a>
