@@ -12,6 +12,6 @@ export const games = [
     name: 'WATERMELON BIRD',
     image: WATERMELON_BIRD,
     appleStore: '',
-    googlePlay: ''
+    googlePlay: 'https://play.google.com/store/apps/details?id=io.phloxcorp.suika'
   },
 ]
