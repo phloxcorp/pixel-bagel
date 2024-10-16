@@ -29,6 +29,11 @@
   align-items: center;
   gap: 22px;
 
+  .gameImage {
+    border-radius: 40px;
+    overflow: hidden;
+  }
+
   .image {
     width: 100%;
   }
