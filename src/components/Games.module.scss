@@ -32,10 +32,13 @@
   .gameImage {
     border-radius: 40px;
     overflow: hidden;
+    aspect-ratio: 1/1;
   }
 
   .image {
     width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
   .name {
