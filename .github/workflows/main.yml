@@ -3,6 +3,7 @@ name: Deploy React App
 on:
   push:
     branches: [ main ]  # main 브랜치에 push 될 때 실행
+  workflow_dispatch:
 
 permissions:
   contents: read
