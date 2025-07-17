@@ -2,6 +2,7 @@ import BLOCK_UNIVERSE from '@images/block_universe.png'
 import WATERMELON_BIRD from '@images/watermelon_bird.png'
 import CAT_BLAST from '@images/cat_blast.png'
 import MEOW_SCREW from '@images/meow_screw.png'
+import FIND_MY_DOG from '@images/find_my_dog.png'
 
 export const games = [
   {
@@ -27,5 +28,11 @@ export const games = [
     image: MEOW_SCREW,
     appleStore: '',
     googlePlay: 'https://play.google.com/store/apps/details?id=io.phloxcorp.screw'
+  },
+  {
+    name: 'FIND MY DOG',
+    image: FIND_MY_DOG,
+    appleStore: '',
+    googlePlay: 'https://play.google.com/store/apps/details?id=io.pixelbagel.find'
   },
 ]
