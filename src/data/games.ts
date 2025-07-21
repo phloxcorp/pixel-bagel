@@ -10,6 +10,7 @@ export const games = [
     image: BLOCK_UNIVERSE,
     appleStore: '',
     googlePlay: 'https://play.google.com/store/apps/details?id=io.phloxcorp.tenbyten',
+    toss: 'https://toss.im/_m/9mulTTw?deep_link_value=intoss%3A%2F%2Fblock&af_dp=intoss%3A%2F%2Fblock',
   },
   {
     name: 'WATERMELON BIRD',
@@ -27,7 +28,8 @@ export const games = [
     name: 'MEOW SCREW',
     image: MEOW_SCREW,
     appleStore: '',
-    googlePlay: 'https://play.google.com/store/apps/details?id=io.phloxcorp.screw'
+    googlePlay: 'https://play.google.com/store/apps/details?id=io.phloxcorp.screw',
+    toss: 'https://toss.im/_m/9mulTTw?deep_link_value=intoss%3A%2F%2Fscrew&af_dp=intoss%3A%2F%2Fscrew',
   },
   {
     name: 'FIND MY DOG',
